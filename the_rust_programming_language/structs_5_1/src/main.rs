@@ -1,11 +1,9 @@
-// Tuple structs allow adding names to tuples. They have the added benefit of making the tuple struct's
-// purpose more clear. Tuple structs are useful when you want to give the whole tuple a name and make the
-// tuple be a different type from other tuples, and naming each field as a struct would be overkill.
+// Unit-Like Structs are structs without any fields.
+// They are useful in situations in which you need to implement a trait on some type but don't have any data to store in the type itself.
+// The behave similarly to unit types, an empty tuple, which are written as ().
 
-struct Color(i32, i32, i32);
-struct Point(i32, i32, i32);
+struct AlwaysEqual;
 
 fn main() {
-    let black = Color(0, 0, 0);
-    let origin = Point(0, 0, 0);
+    let subject = AlwaysEqual;
 }
