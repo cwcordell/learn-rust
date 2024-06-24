@@ -10,6 +10,7 @@ fn main() {
                    // but i32 is Copy, so it's okay to still
                    // use x afterward
     
+    println!("{s}");
 } // Here, x goes out of scope, then s. But because s's value was moved, nothing
   // special happens.
 
