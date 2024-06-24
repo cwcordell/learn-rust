@@ -9,3 +9,7 @@ fn first_word(s: &String) -> usize {
 
     s.len()
 }
+
+fn main() {
+    println!("{}", first_word(&String::from("Some words here")));
+}
