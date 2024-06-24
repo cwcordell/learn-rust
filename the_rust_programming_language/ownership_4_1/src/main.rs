@@ -1,9 +1,11 @@
-fn main() {
-    let reference_to_nothing = dangle();
-}
+fn first_word(s: &String) -> usize {
+    let bytes = s.as_bytes();
 
-fn dangle() -> &String {
-    let s = String::from("hello");
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return i;
+        }
+    }
 
-    &s
+    s.len()
 }
